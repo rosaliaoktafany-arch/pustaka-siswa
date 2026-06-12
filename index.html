@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PustakaSiswa</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<nav class="bg-blue-700 text-white p-4">
+    <div class="flex justify-between items-center">
+
+        <div>
+            <h2 class="text-3xl font-bold">
+                📚 Perpustakaan Digital PustakaSiswa
+            </h2>
+
+            <p class="text-sm mt-2">
+                Temukan berbagai buku pelajaran, novel, komik,
+                self-improvement, dan buku anak.
+            </p>
+        </div>
+
+        <div class="font-semibold text-lg">
+            🛒 Keranjang:
+            <span id="cartCount">0</span>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container mx-auto p-5">
+    <input type="text" id="search" placeholder="Cari Judul, Penulis, atau Penerbit..." class="w-full p-3 border rounded-lg mb-5">
+    <div class="flex flex-wrap gap-2 mb-5">
+
+    <button onclick="tampilkanBuku(bukuData)" class="bg-gray-500 text-white px-4 py-2 rounded"> 
+        Semua
+    </button>
+
+    <button onclick="filterGenre('Pelajaran & UTBK')" class="bg-blue-500 text-white px-4 py-2 rounded">
+        Pelajaran
+    </button>
+
+    <button onclick="filterGenre('Novel & Fiksi')" class="bg-green-500 text-white px-4 py-2 rounded">
+        Novel
+    </button>
+
+    <button onclick="filterGenre('Komik & Manga')" class="bg-yellow-500 text-white px-4 py-2 rounded">
+        Komik
+    </button>
+
+    <button onclick="filterGenre('Self-Improvement')" class="bg-purple-500 text-white px-4 py-2 rounded">
+        Self Improvement
+    </button>
+
+    <button onclick="filterGenre('Buku Anak')" class="bg-pink-500 text-white px-4 py-2 rounded">
+        Buku Anak
+    </button>
+</div>
+
+<div id="bookContainer" class="grid md:grid-cols-3 lg:grid-cols-4 gap-6"> </div>
+
+</div>
+
+<script src="buku-data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
